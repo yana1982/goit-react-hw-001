@@ -1,0 +1,26 @@
+.table {
+  width: 500px;
+  border: 1px solid #000000;
+  border-collapse: collapse;
+  text-align: center;
+  margin: 0 auto 40px;
+}
+
+td,
+th {
+  width: calc(100% / 3);
+  border: 1px solid #000000;
+  padding: 5px;
+}
+.thead {
+  background-color: #1b1a1a;
+  color: #ffffff;
+}
+.tableRow:nth-child(even) {
+  background-color: rgb(162, 159, 159);
+}
+.tableData {
+  text-transform: capitalize;
+  text-align: start;
+  padding-left: 50px;
+}
