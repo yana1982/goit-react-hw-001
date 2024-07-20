@@ -8,16 +8,17 @@ import Profile from "./components/Profile/Profile";
 import userData from "./userData.json";
 
 //_________________FriendListItem_____________//
-import FriendListItem from "./components/FriendList/FriendList";
+import FriendList from "./components/FriendList/FriendList";
 import friends from "../friends.json";
 
 //_________________TransactionHistory_____________//
 import TransactionHistory from "./components/TransactionHistory/TransactionHistory";
 import transactions from "../transactions.json";
+import Section from "./components/Section/Section";
 
 function App() {
   return (
-    <>
+    <Section title={null}>
       <Profile
         name={userData.username}
         tag={userData.tag}
@@ -25,25 +26,9 @@ function App() {
         image={userData.avatar}
         stats={userData.stats}
       />
-      <>
-        <ul>
-          {friends.map((friendListItem) => {
-            return (
-              <li key={friendListItem.id}>
-                <FriendListItem
-                  avatar={friendListItem.avatar}
-                  name={friendListItem.name}
-                  isOnline={friendListItem.isOnline}
-                />
-              </li>
-            );
-          })}
-        </ul>
-      </>
-      <>
-        <TransactionHistory items={transactions} />
-      </>
-    </>
+      <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />
+    </Section>
   );
 }
 export default App;
