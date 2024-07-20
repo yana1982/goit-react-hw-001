@@ -20,5 +20,5 @@
   color: hsl(125, 100%, 29%);
 }
 .isOffline {
-  color: #af0c0c;
+  color: hsl(350, 93%, 47%);
 }
